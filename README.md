@@ -21,7 +21,8 @@ docker run \
     -e AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE \
     -e AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY \
     -e AWS_DEFAULT_REGION=us-west-2 \
-    damadden88/influxdb-to-s3:latest
+    -e AWS_EndPoint=https://s3compatablestoragevendor.com \
+    ghcr.io/techcrazi/influxdb-s3-backup:latest
 ```
 
 or if you just start your docker compose deployment
@@ -36,7 +37,8 @@ docker run \
     -e AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE \
     -e AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY \
     -e AWS_DEFAULT_REGION=us-west-2 \
-    damadden88/influxdb-to-s3:latest
+    -e AWS_EndPoint=https://s3compatablestoragevendor.com \
+    ghcr.io/techcrazi/influxdb-s3-backup:latest
 ```
 
 ## Docker Compose deployment
@@ -77,6 +79,7 @@ services:
       AWS_ACCESS_KEY_ID: AKIAIOSFODNN7EXAMPLE
       AWS_SECRET_ACCESS_KEY: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
       AWS_DEFAULT_REGION: us-west-2
+      AWS_EndPoint=https://s3compatablestoragevendor.com
       CRON: '* * * * *'
 ```
 
@@ -90,7 +93,8 @@ docker run \
     -e AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE \
     -e AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY \
     -e AWS_DEFAULT_REGION=us-west-2 \
-    damadden88/influxdb-to-s3:latest \
+    -e AWS_EndPoint=https://s3compatablestoragevendor.com \
+    ghcr.io/techcrazi/influxdb-s3-backup:latest \
     backup
 ```
 
@@ -106,7 +110,8 @@ docker run \
     -e AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE \
     -e AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY \
     -e AWS_DEFAULT_REGION=us-west-2 \
-    damadden88/influxdb-to-s3:latest \
+    -e AWS_EndPoint=https://s3compatablestoragevendor.com \
+    ghcr.io/techcrazi/influxdb-s3-backup:latest \
     restore
 ```
 
@@ -129,5 +134,6 @@ docker run \
 
 # Thanks To:
 
+- Martin Mueller https://github.com/mmuller88/influxdb-s3-backup
 - Jacob Tomlinson https://github.com/jacobtomlinson/docker-influxdb-to-s3
 - And to the amazing [Projen Community](https://github.com/projen/projen)
