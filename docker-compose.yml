@@ -14,3 +14,4 @@ services:
       DATABASE_HOST: influxdb
       S3_BUCKET: rasp4backup
       AWS_DEFAULT_REGION: us-west-2
+      AWS_EndPoint: "https://s3vendor.com"
