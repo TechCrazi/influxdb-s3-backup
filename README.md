@@ -61,7 +61,7 @@ docker-compose up -d --build
 ### Example
 
 ```yaml
-version: '3.3'
+version: '3.8'
 
 services:
   influxdb:
@@ -79,7 +79,7 @@ services:
       AWS_ACCESS_KEY_ID: AKIAIOSFODNN7EXAMPLE
       AWS_SECRET_ACCESS_KEY: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
       AWS_DEFAULT_REGION: us-west-2
-      AWS_EndPoint=https://s3compatablestoragevendor.com
+      AWS_EndPoint: "https://s3compatablestoragevendor.com"
       CRON: '* * * * *'
 ```
 
